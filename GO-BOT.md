@@ -2,7 +2,7 @@
 >
 > **Paste this on the bot only.** This is **pre-run 1**. It is not Wednesday. It is not Tuesday. The desk paste is [GO-DESK.md](GO-DESK.md). Mini's paste is [GO-MINI.md](GO-MINI.md).
 >
-> **This paste sends payments in one minute, after the Tuesday gate. It does not send before that gate.**
+> **This paste sends payments in one minute, at or after 23:00 CET (22:00 UTC) on 10 Nov 2026. It does not send before that hour.**
 
 # YOU ARE THE BOT
 
@@ -20,9 +20,9 @@ You send payments in the HOLD-4 minute, from your own coins, on a public node ou
 
 ## The gate
 
-Stop, and do not start a runner, if the UTC time is before **2026-11-10T22:15:00Z**. Say `HELD` and `tuesday-ahead`. Do not start a waiter. Do not open Tuesday's sender.
+Stop, and do not start a runner, if the time is before **23:00 CET (22:00 UTC)** on 10 Nov 2026. Say `HELD` and `before-start`. Do not start a waiter. Do not open Tuesday's sender.
 
-When the gate time has passed, this read may start one runner. The runner sleeps until both of these are on origin:
+When that hour has passed, this read may start one runner. The runner sleeps until both of these are on origin:
 
 - [logs/PRE-RUN-OPEN.md](logs/README.md)
 - the desk's [counts/desk/HOLD-3.md](counts/desk/README.md), `MET` or `NOT MET`
@@ -47,7 +47,7 @@ You do not write `counts/desk/` or `counts/mini/`. No txid, key, seed, address, 
 
 ## What you refuse
 
-- Sending before 2026-11-10T22:15:00Z.
+- Sending before 23:00 CET (22:00 UTC) on 10 Nov 2026.
 - Sending during HOLD-1, HOLD-2, HOLD-3, or RETURN.
 - A node the desk is still using, or two processes on one node.
 - Starting a local node.

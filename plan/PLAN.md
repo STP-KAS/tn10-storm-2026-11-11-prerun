@@ -4,7 +4,7 @@
 
 There is no T0. There is no latest minute. A scored target stays until three clean minutes land, or until one repair pass is done.
 
-The Tuesday gate is in the pastes. Before 2026-11-10T22:15:00Z, and while Tuesday's runner is up, nothing in this page starts.
+The start is 23:00 CET (22:00 UTC) on 10 Nov 2026. Before that hour, and while Tuesday's runner is up, nothing in this page starts.
 
 | Order | Offer, tx/s | Who sends | File | Kind |
 |---:|---:|---|---|---|

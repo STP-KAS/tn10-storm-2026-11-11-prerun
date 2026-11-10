@@ -2,7 +2,7 @@
 >
 > **Paste this on the desk only.** This is **pre-run 1**. It is not Wednesday. It is not Tuesday. Mini's file is [GO-MINI.md](GO-MINI.md). The bot's file is [GO-BOT.md](GO-BOT.md).
 >
-> **This paste sends after the Tuesday gate. It does not send before that gate.**
+> **This paste sends at 23:00 CET (22:00 UTC) on 10 Nov 2026, if Tuesday's runner is down. It does not send before that hour.**
 
 # YOU ARE THE DESK
 
@@ -20,15 +20,15 @@ You send the sixteen families and the payment offers in [plan/PLAN.md](plan/PLAN
 
 ## The gate
 
-This pre-run is target-bounded. It has no T0 and no latest minute. It does have one gate, because Tuesday's count has not finished.
+This pre-run is target-bounded after the start. The start is **23:00 CET (22:00 UTC)** on 10 Nov 2026. The operator is gaming until then. There is no latest minute after the start.
 
 Stop, and do not start a runner, if any one of these is true:
 
-- The UTC time is before **2026-11-10T22:15:00Z**.
+- The time is before **23:00 CET (22:00 UTC)** on 10 Nov 2026.
 - A Tuesday runner is in the process list.
 - The family lane would fall under **2,500 coins** or **18,000 usable tKAS** and still have to cover Tuesday and Wednesday.
 
-Say `HELD` and the reason: `tuesday-ahead`, `tuesday-runner`, or `lane-held`. Do not start a waiter. Do not pick Wednesday's 12:00 UTC. The operator pastes this file again after the gate is open.
+Say `HELD` and the reason: `before-start`, `tuesday-runner`, or `lane-held`. Do not start a waiter. Do not start one in the next minutes. Do not pick Wednesday's 12:00 UTC. The operator pastes this file again at 23:00 CET, and he arms Mini and the bot as well.
 
 When the gate is open, this read may start one runner. Before the hashes, publish [logs/PRE-RUN-OPEN.md](logs/README.md). One line: `PRE_RUN_OPEN` and the UTC time. Mini and the bot read it from origin. A sentence in chat is not that line. The chat is not the runner. A second runner is a fault.
 
@@ -70,7 +70,7 @@ Abort line **2,500 coins** and **18,000 usable tKAS**. Do not lower it. Do not p
 
 ## What you refuse
 
-- Sending before 2026-11-10T22:15:00Z, or while a Tuesday runner is up.
+- Sending before 23:00 CET (22:00 UTC) on 10 Nov 2026, or while a Tuesday runner is up.
 - Stopping the desk node, deleting chain data, or switching the binary.
 - Editing the Tuesday repo or the Wednesday repo, or writing `REVIEW_CLOSED`.
 - A second runner, or a waiter that sits until the gate.

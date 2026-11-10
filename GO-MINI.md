@@ -2,7 +2,7 @@
 >
 > **Paste this on Mini only.** This is **pre-run 1**. It is not Wednesday. It is not Tuesday. The desk's file is [GO-DESK.md](GO-DESK.md). The bot's file is [GO-BOT.md](GO-BOT.md).
 >
-> **This paste counts after the Tuesday gate. It does not count before that gate.**
+> **This paste counts at 23:00 CET (22:00 UTC) on 10 Nov 2026. It does not count before that hour.**
 
 # YOU ARE MINI
 
@@ -20,9 +20,9 @@ You count on your own node. You are the only chain counter. You do not send. You
 
 ## The gate
 
-Stop, and do not start a counter, if the UTC time is before **2026-11-10T22:15:00Z**, or if the desk has not pushed [logs/PRE-RUN-OPEN.md](logs/README.md). That file is the desk's line that the gate is open. A sentence in chat is not the signal.
+Stop, and do not start a counter, if the time is before **23:00 CET (22:00 UTC)** on 10 Nov 2026, or if the desk has not pushed [logs/PRE-RUN-OPEN.md](logs/README.md). That file is the desk's line that the start has passed and Tuesday's runner is down. A sentence in chat is not the signal.
 
-If you are early, say `HELD` and `tuesday-ahead`. Do not start a waiter. Do not paste Wednesday's Mini file.
+If you are early, say `HELD` and `before-start`. Do not start a waiter. Do not paste Wednesday's Mini file.
 
 When the gate file is on origin, this read may start one counter. Your first publish is [logs/MINI-ARMED.md](logs/README.md). One line: `MINI_ARMED` and the UTC time. Push it. If the push fails, try once more, then stop. The desk reads it from origin before the first family submit. If a session compacts, leave the runner alone.
 

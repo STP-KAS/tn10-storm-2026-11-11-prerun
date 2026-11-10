@@ -6,7 +6,7 @@
 
 **Pre-run of the Wednesday neuron.** The neuron stays [tn10-storm-2026-11-11](https://github.com/STP-KAS/tn10-storm-2026-11-11), Wed 11 Nov 2026, 12:00 UTC. This repo does not edit that repo, does not write `REVIEW_CLOSED`, and does not move that clock.
 
-**Tuesday stays Tuesday.** [tn10-storm-2026-11-10](https://github.com/STP-KAS/tn10-storm-2026-11-10), T0 19:00 UTC on 10 Nov 2026. This pre-run does not send while that runner is up, and it does not send before **2026-11-10T22:15:00Z**. A paste before that time holds. It does not wait around, and it does not pick Wednesday noon instead.
+**Tuesday stays Tuesday.** [tn10-storm-2026-11-10](https://github.com/STP-KAS/tn10-storm-2026-11-10), T0 19:00 UTC on 10 Nov 2026. This pre-run does not send while that runner is up. The operator is gaming until **23:00 CET (22:00 UTC)** on 10 Nov 2026. That is the start. A paste before that time holds. It does not start a runner in the meantime, and it does not pick Wednesday noon instead.
 
 ## Sum-up
 
@@ -39,13 +39,13 @@ A miss here stays in this repo. The next attempt is a new repo, `tn10-storm-2026
 
 ## Clock
 
-There is no start hour. After the Tuesday gate below, the run follows targets.
+The start is **23:00 CET (22:00 UTC)** on 10 Nov 2026. After that, the run follows targets. There is no latest minute.
 
 | Gate | What |
 |---|---|
-| Before 2026-11-10T22:15:00Z | Hold. Do not send. Do not start a waiter. |
-| Tuesday's runner still up | Hold. Do not send. |
-| After that gate, Tuesday's runner down | The paste may start one runner on each machine. Targets only. |
+| Before 23:00 CET (22:00 UTC) | Hold. Do not send. Do not start a waiter. |
+| Tuesday's runner still up | Hold, even at 23:00. Do not send on top of it. |
+| 23:00 CET has passed, and Tuesday's runner is down | The operator sends the three pastes. That send is the arm. One runner on each machine. Targets only. |
 
 Targets: 1,013, then 2,027, then 3,040, then one observation minute at 4,053, then 1,013 again. Scored steps need three clean minutes, or they close `NOT MET` after one repair pass. HOLD-4 is the minute pinned in [plan/PLAN.md](plan/PLAN.md).
 

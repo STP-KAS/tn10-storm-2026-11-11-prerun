@@ -1,6 +1,6 @@
 > **Experimental. We are just trying this.** [Disclaimer](../DISCLAIMER.md) · No covenant id in this folder.
 >
-> Absent until the desk writes it, after the Tuesday gate and before the first family submit.
+> Absent until the desk writes it, at or after 23:00 CET (22:00 UTC) on 10 Nov 2026, and before the first family submit.
 
 # Hashes
 

@@ -12,7 +12,7 @@ The operator arms the machine. He sends the matching paste. Until that send, the
 
 The desk publishes [counts/desk/](counts/desk/README.md). Mini publishes [counts/mini/](counts/mini/README.md). The bot publishes [counts/bot/HOLD-4.md](counts/bot/README.md). Each machine writes only its own folder.
 
-Before 2026-11-10T22:15:00Z the pastes hold. They do not send, and they do not wait in a process. The desk node stays up.
+The start is 23:00 CET (22:00 UTC) on 10 Nov 2026. Before that hour the pastes hold. They do not send, and they do not wait in a process. If Tuesday's runner is still up at 23:00, they keep holding. The desk node stays up.
 
 A fix that works is appended to [locks/LOCKED.md](locks/LOCKED.md). The pastes in this repo stay as they were at the arm. The next pre-run is a new repo and starts from that lock file.
 
