@@ -32,6 +32,8 @@ Say `HELD` and the reason: `before-start`, `tuesday-runner`, or `lane-held`. Do 
 
 When the gate is open, this read may start one runner. Before the hashes, publish [logs/PRE-RUN-OPEN.md](logs/README.md). One line: `PRE_RUN_OPEN` and the UTC time. Mini and the bot read it from origin. A sentence in chat is not that line. The chat is not the runner. A second runner is a fault.
 
+Before the sixteen hashes, check each public node in the local config. The check is version, synced, DAA within a few blocks of the others, UTXO index, and answer time. Drop a node that fails. Do not put one back after the first family submit. The local log keeps the count checked and pass or fail. No names. The 6 Oct per-node hold is about 571 seen accepted. If the kept nodes times 571 sit under 1,824, the local log says HOLD-2 is the expected first miss. Leave the offers as they are. This check does not stop the desk node.
+
 ## Targets
 
 Read [locks/LOCKED.md](locks/LOCKED.md) first. Do not reopen a locked line.
@@ -52,11 +54,11 @@ A clean minute: your submit path is synced, that node's DAA is moving, submit-OK
 
 Your payment senders use every public node that answers synced. One process per node. Skip a node that does not answer. Do not put two processes on one node. Through HOLD-4 you keep every node you used in HOLD-3. Do not drop one to free it. Families 1–13 and families 14–16 stay on the same nodes. The node list stays off this repo. Your file lists the local node numbers once.
 
-A repair may restart the sender, move the submit to another synced public node, or repair the builder. Each is tried once for that reason. Waiting is not another try. A repair does not raise the fee, start the desk node, bring the bot in, or open a second runner. Then publish `NOT MET` if the minute is still dirty. HOLD-3 `NOT MET` still opens HOLD-4.
+A repair may restart the sender, move the submit to another synced public node, or repair the builder. Each is tried once for that reason. Waiting is not another try. A repair that moves the family sender moves both cohorts. A repair does not raise the fee, start the desk node, start a second builder, bring the bot in, or open a second runner. Then publish `NOT MET` if the minute is still dirty. HOLD-3 `NOT MET` still opens HOLD-4.
 
 The HOLD-4 minute is the first whole UTC minute whose start is at least 3 minutes after the HOLD-3 file's On origin time. Read that time from origin. Publish that minute. If the path is not synced, the first line stays `OBSERVATION` and one line says the path was not synced. Do not open a later minute. Do not chase 4,053. Do not wait for the bot.
 
-Fees, sompi per gram: families 1–13 pay **100**. Families 14–16 pay **200**. Payments pay **150**. Do not read a priority quote. Do not read a fee estimate. A full mempool is logged as full and does not stop that sender. A reject for the rate stops that sender.
+Fees, sompi per gram: families 1–13 pay **100**. Families 14–16 pay **200**. Payments pay **150**. The sixteen are one build: one program, one hop shape, one minter size, one token size. That token size is the size this plan calls about 1 tKAS locked per landed hop. Build both cohorts in the one family-sender process, on one node set. The rate is per family. A single rate on the whole process is a miss. Log it. Do not call the fee the cause. Do not start a second builder. If the funding coins are not one size, the file says so and does not call the fee the whole cause. Storage mass can move with the rate, because the fee comes out of the funding coin. That move is the fee. It is not a second knob. Do not read a priority quote. Do not read a fee estimate. A full mempool is logged as full and does not stop that sender. A reject for the rate stops that sender. Leave the fee. Log the miss. Leave the others up.
 
 ## What you publish
 

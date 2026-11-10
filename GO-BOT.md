@@ -33,11 +33,11 @@ You do not send while you wait. If [logs/BOT-HALT.md](logs/README.md) is on orig
 
 Read [locks/LOCKED.md](locks/LOCKED.md). Do not reopen a locked line.
 
-The node list stays off this repo. Your local config holds the nodes outside the desk's HOLD-3 set. That set includes the family nodes. Use one process on one of those nodes. It must answer synced, and its DAA must be moving. If the config has no such node, write `NO SEND` and `no-free-node`. The desk's minute still runs.
+The node list stays off this repo. Your local config holds the nodes outside the desk's HOLD-3 set. That set includes the family nodes. Use one process on one of those nodes. It must answer synced, and its DAA must be moving. Skip a node that does not answer synced. If the config has no such node, write `NO SEND` and `no-free-node`. The desk's minute still runs. You do not wait for a node to appear. You do not take a node the desk is still using. The desk does not drop a node to free one for you.
 
 You spend your own coins. If they cannot cover the minute, write `NO SEND` and `coins-short`. Do not print a balance. Do not spend the desk's coins.
 
-The sample minute is the first whole UTC minute whose start is at least 3 minutes after the desk's HOLD-3 file's On origin time. You read that time from origin. You send in that minute. You do not choose a later minute. If you wake after it, write `NO SEND` and `suspend`. Fee is **150** sompi per gram. Do not read a priority quote. Do not raise the fee. Do not chase 4,053.
+The sample minute is the first whole UTC minute whose start is at least 3 minutes after the desk's HOLD-3 file's On origin time. You read that time from origin. You send in that minute. You do not choose a later minute. If you wake after it, write `NO SEND` and `suspend`. If [logs/BOT-HALT.md](logs/README.md) is on origin and you have not published, write `NO SEND` and `halt`. Fee is **150** sompi per gram. You do not build the families. Your 150 stays your own payment row. It is not a third family cohort. The desk's 100 and 200 stay on the desk. Do not read a priority quote. Do not raise the fee. Do not chase 4,053.
 
 A full mempool is a reject logged as full. A reject for the rate is logged as rate.
 

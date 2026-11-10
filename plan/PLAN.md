@@ -14,7 +14,7 @@ The start is 23:00 CET (22:00 UTC) on 10 Nov 2026. Before that hour, and while T
 | 4 | 4,053 | desk, and the bot if a free synced node answers | HOLD-4 | observation |
 | 5 | 1,013 | desk | RETURN | scored |
 
-Sixteen families, offer 1.2 hop/s, boson, stagger 0, from the first send until RETURN closes. Families 1–13 pay 100 sompi/gram. Families 14–16 pay 200. Payments pay 150. Both cohorts use the same family-sender nodes.
+Sixteen families, offer 1.2 hop/s, boson, stagger 0, from the first send until RETURN closes. Families 1–13 pay 100 sompi/gram. Families 14–16 pay 200. Payments pay 150. The sixteen are one build, one family-sender process, one node set. The rate is per family. A single rate for the process is not a fee difference. A second builder is not the fix. If the funding coins are not one size, the file says so and does not call the fee the whole cause.
 
 A scored minute is clean when the desk's submit path is synced, that node's DAA is moving, submit-OK is within 10 percent, rejects are logged as rate or full, no sender-off, pool-low, node-drop, or proc-exit, and every family is still attempting. Mini's marks do not gate the next offer.
 

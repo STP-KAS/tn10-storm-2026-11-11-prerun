@@ -50,7 +50,7 @@ HOLD-4 waits. You publish it when any one of these is true:
 | 4,053, one minute | [counts/mini/HOLD-4.md](counts/mini/README.md) |
 | 1,013, again | [counts/mini/RETURN.md](counts/mini/README.md) |
 
-The file clock is the accepting block header time on your node. Count the sixteen family labels when the hash file's sha256 matches. Do not write the covenant id. Carry landed hops per minute for families 1–13 and for families 14–16. Also count non-coinbase transactions your node accepted. That number includes base load. Your file carries your sync, your DAA, and merged blocks per second. Those marks do not gate the desk.
+The file clock is the accepting block header time on your node. Count the sixteen family labels when the hash file's sha256 matches. Do not write the covenant id. Carry landed hops per minute for families 1–13 and for families 14–16. The sixteen are one build. You still count the two cohorts. You do not decide the cause. If the desk file says the rates were one rate, or the coins were not one size, you still publish both cohorts and you do not add a cause. Also count non-coinbase transactions your node accepted. That number includes base load. Your file carries your sync, your DAA, and merged blocks per second. Those marks do not gate the desk. A minute you did not read in full stays marked. The gap is not filled.
 
 In the local log, each minute also records mempool size, free memory, and CPU. Those three stay out of the count file. If a read is slow, or memory runs short, drop those three first. The hop count stays. After RETURN is on origin, keep those local marks for 15 minutes, then stop. That tail is not a count file.
 
