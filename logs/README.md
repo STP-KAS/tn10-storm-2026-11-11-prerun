@@ -15,3 +15,5 @@
 METHOD.md leads with accepted hops per cohort and payment accepts per target. It says whether the result was decent or short of decent, as [README.md](../README.md) defines those words. If the rates were one rate, or the coins were not one size, or the cohorts did not share one node set, it says so and does not call the fee the whole cause. Then the misses, the fixes, and the On origin time of each count file. A fee estimate is not a row.
 
 A worked fix is also appended to [locks/LOCKED.md](../locks/LOCKED.md). This file does not rewrite a paste.
+
+The rehearsal playbook map is [PLAYBOOK.md](../PLAYBOOK.md) at the repo root. It is not started by a machine. It records issues and roles for this close-out.

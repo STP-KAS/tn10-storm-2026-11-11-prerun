@@ -20,6 +20,9 @@ The Wednesday plan is target-bounded after its start. This pre-run is target-bou
 
 [GO.md](GO.md) is the map. It does not start a machine. The operator sends the paste. That send is the arm.
 
+The close-out and the role map for this rehearsal are in [PLAYBOOK.md](PLAYBOOK.md): who starts when, what oversight watches (nodes, hashes, senders, files), and each issue from pre-run 1 with where it happened and how it was handled. A read of that page does not arm a machine.
+
+
 ## What a decent result is
 
 Decent is enough to stop opening another pre-run.
