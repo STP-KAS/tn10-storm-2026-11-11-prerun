@@ -31,3 +31,49 @@ One block per fix:
 ```
 
 The go files in this repo stay as they were at the paste. The next repo copies this page and bakes the new lines into its own pastes.
+
+### Worked fixes appended on 11 Nov 2026, after pre-run 1 failed
+
+These blocks are appended in the form above. The line `Nothing yet.` is the state before these blocks. Pre-run 2, [tn10-storm-2026-11-11-prerun-2](https://github.com/STP-KAS/tn10-storm-2026-11-11-prerun-2), starts from this page.
+
+```
+- 2026-11-11T07:21:32Z.
+- What failed: the desk and Mini reset during pre-run 1, before hashes or sends. Nothing was armed for send after the reset.
+- What was changed: pre-run 1 was marked failed in logs/FAILED.md and closed. It is not resumed. The next attempt is a new repo, tn10-storm-2026-11-11-prerun-2.
+- Why that change stays: a failed pre-run's open and armed files are history, not live gates. A new attempt opens its own files in its own repo.
+```
+
+```
+- 2026-11-11T07:16:33Z.
+- What failed: the bot waiter from pre-run 1 kept polling origin after the desk and Mini had reset. A late HOLD-3 file could have made it send on a dead run.
+- What was changed: the operator stopped the waiter. BOT-HALT was written. No second waiter was started.
+- Why that change stays: a waiter does not outlive its run. When a run fails, its waiters are stopped and not reused. A new run gets a new paste.
+```
+
+```
+- 2026-11-11T08:04:08Z.
+- What failed: Mini rebooted during pre-run 1 and its TN10 kaspad was down.
+- What was changed: the existing Mini TN10 kaspad was started with its existing start task and data directory. No wipe. It re-synced from its own data, finished IBD, and accepted live blocks.
+- Why that change stays: before any new paste or arm, start the existing Mini TN10 kaspad if it is down. Do not wipe chain data. Re-sync first. When isSynced is true and DAA is moving, Mini notifies Build and TN10 ops. Mini does not publish a new MINI-ARMED until GO-MINI is pasted and PRE-RUN-OPEN is on origin.
+```
+
+```
+- 2026-11-11T07:54:58Z.
+- What failed: the desk rebooted during pre-run 1 and its private TN10 kaspad was down. Windows PowerShell 5.1 drops the start arguments and can open mainnet.
+- What was changed: the existing desk private TN10 kaspad was started from its existing data, loopback only, with PowerShell 7 (pwsh). No wipe. KaspaPublicNode was not started. The desk devnet was left alone. IBD finished and the node accepted live blocks.
+- Why that change stays: start the desk private TN10 node from existing data if it is down, with pwsh 7, never Windows PowerShell 5.1. Do not wipe. Do not start KaspaPublicNode. Leave the desk devnet alone. The pre-run does not stop the desk node process.
+```
+
+```
+- 2026-11-11T09:59:00Z.
+- What failed: pre-run 1 was gated on a wall clock and a waiter sat on that clock. The day's clock moved and the run died before hashes.
+- What was changed: the operator set the next attempt as target-oriented, with no time frames.
+- Why that change stays: the pre-run is target-bounded. It has no T0 after the start and no public clock. Order: hashes first (hashes/SIXTEEN.md, sixteen rows, with an On origin line), then covenant families, then gradual senders. The bot sends only in the HOLD-4 minute after desk HOLD-3 is on origin, or writes a legal NO SEND. Chat is not the start signal. The operator's paste is the arm.
+```
+
+```
+- 2026-11-11T10:00:00Z.
+- What failed: the desk hash tools publish only 8 or 32 families. The pre-run needs sixteen.
+- What was changed: the old 8- and 32-family publisher is barred for the pre-run. A sixteen-family path is needed before any hash file is published. No hash value or covenant id is invented.
+- Why that change stays: a hash file with the wrong family count is not proof. No sixteen-row file with an On origin line, no family submit.
+```
